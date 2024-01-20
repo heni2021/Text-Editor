@@ -7,7 +7,6 @@ export default function TextForm(props) {
     const upperCaseClicked = () => {
         let newText = text.toUpperCase();
         upperPressed = true;
-        console.log("Current Text = " + currentText);
         setText(newText);
         props.alert("Text Converted to Upper Case!", "success");
     }
@@ -15,14 +14,12 @@ export default function TextForm(props) {
     const lowerCaseClicked = () => {
         let newText = text.toLowerCase();
         lowerPressed = true;
-        console.log("Current Text = " + currentText);
         setText(newText);
         props.alert("Text Converted to Lower Case!", "success");
 
     }
 
     const getOriginalText = () => {
-        console.log("Current Text = " + currentText);
         setText(currentText);
         props.alert("Original Text Regained!", "success");
 
@@ -39,10 +36,8 @@ export default function TextForm(props) {
     const getWordCount = (event) => {
         let count = 0;
         const splittedString = currentText.split(" ");
-        console.log(splittedString);
         for (let i = 0; i < splittedString.length; i++) {
             if (splittedString[i].length > 1) {
-                console.log(splittedString[i] + " Done!");
                 count++;
             }
         }
@@ -54,7 +49,6 @@ export default function TextForm(props) {
         let newText = currentText;
         newText = newText.toLowerCase();
         const splittedString = newText.split("");
-        console.log(splittedString);
         for (let i = 0; i < splittedString.length; i++) {
             if (splittedString[i] === 'a' || splittedString[i] === 'e' || splittedString[i] === 'i' || splittedString[i] === 'o' || splittedString[i] === 'u') {
                 count++;
@@ -82,7 +76,6 @@ export default function TextForm(props) {
         let newText = currentText;
         newText = newText.toLowerCase();
         const splittedString = newText.split("");
-        console.log(splittedString);
         for (let i = 0; i < splittedString.length; i++) {
             if (splittedString[i] !== 'a' && splittedString[i] !== 'e' && splittedString[i] !== 'i' && splittedString[i] !== 'o' && splittedString[i] !== 'u') {
                 count++;
@@ -93,11 +86,9 @@ export default function TextForm(props) {
 
     // if event not handled we cannot type anything in the text box
     const handleOnChange = (event) => {
-        console.log("OnChange is occured!" + event.target.value);
         if (!upperPressed && !lowerPressed) {
             currentText = event.target.value;
         }
-        console.log("Current Text = " + currentText);
         setText(event.target.value)// changing value of text variable everytime
     }
     const [text, setText] = useState('');
@@ -123,10 +114,6 @@ export default function TextForm(props) {
                     <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={removeExtraSpace}>Trim Text</button>
 
                 </div>
-                {/* <div className="container mb-2">
-                <p>Number of characters: {text.length}</p>
-                <p>Number of words: {text.split(" ").length}</p>
-            </div> */}
             </div>
         </>
     );

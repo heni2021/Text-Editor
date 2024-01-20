@@ -46,7 +46,6 @@ function App() {
             <Route exact path="/about" element={<About mode={mode}/>} />
             <Route exact path="" element={<TextForm alert={showAlertMessage} textLabel="Enter Text to Analyze Below: " mode={mode} />} />
           </Routes>
-        {/* <TextForm alert={showAlertMessage} textLabel="Enter Text to Analyze Below: " mode={mode} /> */}
       </div>
       </Router>
     </>
