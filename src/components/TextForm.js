@@ -109,18 +109,18 @@ export default function TextForm(props) {
                 {/* setText is the updation function which is used to update text variable which contains text in textbox */}
                 <h1>{props.textLabel}</h1>
                 <div className={`mb-4`}>
-                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'light' ? 'white' : 'grey', color: props.mode === 'light' ? 'black' : 'white' }} id="myTextBox" rows="10"></textarea>
+                    <textarea className="form-control" value={text} onChange={handleOnChange} style={{ backgroundColor: props.mode === 'light' ? 'white' : '#aaa6c0', color: props.mode === 'light' ? 'black' : 'white' }} id="myTextBox" rows="10"></textarea>
                 </div>
                 <div className="mb-2">
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={upperCaseClicked}>To UpperCase</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={lowerCaseClicked}>To LowerCase</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={getOriginalText}>Get Original Text</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={getWordCount}>Get Word Count</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 mb-2`} onClick={getVowelCount}>Get Vowel Count</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={getConsonantCount}>Get Consonant Count</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={clearText}>Clear Text</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={copyText}>Copy Text</button>
-                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2`} onClick={removeExtraSpace}>Trim Text</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={upperCaseClicked}>To UpperCase</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={lowerCaseClicked}>To LowerCase</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={getOriginalText}>Get Original Text</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={getWordCount}>Get Word Count</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1 mb-2`} onClick={getVowelCount}>Get Vowel Count</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={getConsonantCount}>Get Consonant Count</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={clearText}>Clear Text</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={copyText}>Copy Text</button>
+                    <button className={`btn btn-outline-${props.mode === 'light' ? 'primary' : 'info'} mx-2 my-1`} onClick={removeExtraSpace}>Trim Text</button>
 
                 </div>
                 {/* <div className="container mb-2">

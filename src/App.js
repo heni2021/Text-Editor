@@ -1,14 +1,10 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import About from './components/About';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -47,11 +43,11 @@ function App() {
       <div className='container my-3'>
           <Routes>
             {/*exact path --> used for complete matching of the url */}
-            <Route exact path="/about" element={<About />} />
+            <Route exact path="/about" element={<About mode={mode}/>} />
             <Route exact path="" element={<TextForm alert={showAlertMessage} textLabel="Enter Text to Analyze Below: " mode={mode} />} />
           </Routes>
+        {/* <TextForm alert={showAlertMessage} textLabel="Enter Text to Analyze Below: " mode={mode} /> */}
       </div>
-      {/* <About /> */}
       </Router>
     </>
   );
